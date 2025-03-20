@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        // Enable type checking in JS files
+        // "checkJs": true,
+        // "strict": true,
+        "target": "ESNext",
+        "lib": [
+            "DOM",
+            "ESNext"
+        ]
+    },
+    "include": [
+        "**/*.js"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
