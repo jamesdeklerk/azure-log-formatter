@@ -1,8 +1,10 @@
 {
     "manifest_version": 3,
+
     "name": "Azure Log Formatter (Beta)",
-    "version": "0.3",
     "description": "In Application Insights, double-click a C# exception stack trace or JSON object to view a formatted version",
+    "version": "0.4",
+
     "content_scripts": [
         {
             "matches": [
@@ -10,20 +12,22 @@
                 "*://*.azure.net/*"
             ],
             "js": [
-                "stackTraceFormatter.js",
-                "prism.js",
-                "content.js"
+                "scripts/stackTraceFormatter.js",
+                "scripts/prism.js",
+                "scripts/content.js"
             ],
             "css": [
-                "prism.css",
-                "styles.css"
+                "css/prism.css",
+                "css/styles.css"
             ],
             "all_frames": true,
             "run_at": "document_idle"
         }
     ],
-    "host_permissions": [
-        "*://*.azure.com/*",
-        "*://*.azure.net/*"
-    ]
+
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    }
 }
